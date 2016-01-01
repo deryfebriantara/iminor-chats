@@ -1,0 +1,32 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list>
+    <div class="list" ng-show="data === undefined">
+    	<div class="item">
+    		<button  class="button button-block button-positive icon ion-social-facebook" ng-click="fbLogin()">      Login Dengan Facebook</button>
+
+    	</div>
+    </div>
+    <div class="list card" ng-show="data !== undefined">
+
+  <div class="item item-avatar">
+    <img ng-src="{{data.imgUrl}}">
+    <h2>{{data.user}}</h2>
+  </div>
+
+  <div class="item item-body">
+    <p>
+      {{data.description}}
+    </p>
+    
+  </div>
+
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <button class="button button-block button-assertive " ng-click="logout()"> LogOut</button>
+  </div>
+
+</div>
+    
+    </ion-list>
+  </ion-content>
+</ion-view>
